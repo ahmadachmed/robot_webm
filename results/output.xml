@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.8.6 on win32)" generated="20210708 16:18:58.600" rpa="false">
+<suite id="s1" name="Features" source="D:\webm\features">
+<suite id="s1-s1" name="Live Chat" source="D:\webm\features\live_chat">
+<suite id="s1-s1-s1" name="live chatTest" source="D:\webm\features\live_chat\live_chatTest.robot">
+<test id="s1-s1-s1-t1" name="Send chat from Live TV RCTI channel">
+<kw name="Chrome Mobile Go To URL" library="Setup" type="setup">
+<doc>Starts a Chrome Browser in Mobile Emulation with specified device model</doc>
+<arguments>
+<arg>${siteUrl}</arg>
+</arguments>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys</arg>
+</arguments>
+<assign>
+<var>${options}</var>
+</assign>
+<msg timestamp="20210708 16:18:58.993" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000027C72BBA4C0&gt;</msg>
+<status status="PASS" starttime="20210708 16:18:58.993" endtime="20210708 16:18:58.993"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>deviceName=${mobile}</arg>
+</arguments>
+<assign>
+<var>&amp;{mobile_emulation}</var>
+</assign>
+<msg timestamp="20210708 16:18:58.994" level="INFO">&amp;{mobile_emulation} = { deviceName=Galaxy S5 }</msg>
+<status status="PASS" starttime="20210708 16:18:58.993" endtime="20210708 16:18:58.994"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${options}</arg>
+<arg>add_experimental_option</arg>
+<arg>mobileEmulation</arg>
+<arg>${mobile_emulation}</arg>
+</arguments>
+<status status="PASS" starttime="20210708 16:18:58.994" endtime="20210708 16:18:58.994"></status>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<arguments>
+<arg>Chrome</arg>
+<arg>chrome_options=${options}</arg>
+</arguments>
+<msg timestamp="20210708 16:18:58.995" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20210708 16:18:58.995" endtime="20210708 16:19:01.369"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+</arguments>
+<msg timestamp="20210708 16:19:01.370" level="INFO">Opening url 'https://rc-webm.rctiplus.com'</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210708 16:19:07.749" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-48.png"&gt;&lt;img src="selenium-screenshot-48.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210708 16:19:05.493" endtime="20210708 16:19:07.749"></status>
+</kw>
+<msg timestamp="20210708 16:19:07.754" level="FAIL">WebDriverException: Message: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=91.0.4472.124)
+</msg>
+<status status="FAIL" starttime="20210708 16:19:01.370" endtime="20210708 16:19:07.755"></status>
+</kw>
+<status status="FAIL" starttime="20210708 16:18:58.992" endtime="20210708 16:19:07.755"></status>
+</kw>
+<kw name="Close my Browser" library="Setup" type="teardown">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20210708 16:19:07.757" endtime="20210708 16:19:11.357"></status>
+</kw>
+<status status="PASS" starttime="20210708 16:19:07.756" endtime="20210708 16:19:11.357"></status>
+</kw>
+<status status="FAIL" starttime="20210708 16:18:58.991" endtime="20210708 16:19:11.357" critical="yes">Setup failed:
+WebDriverException: Message: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=91.0.4472.124)
+</status>
+</test>
+<test id="s1-s1-s1-t2" name="Send chat from Live TV MNCTV channel">
+<kw name="Chrome Mobile Go To URL" library="Setup" type="setup">
+<doc>Starts a Chrome Browser in Mobile Emulation with specified device model</doc>
+<arguments>
+<arg>${siteUrl}</arg>
+</arguments>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys</arg>
+</arguments>
+<assign>
+<var>${options}</var>
+</assign>
+<msg timestamp="20210708 16:19:11.359" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000027C72C2BD90&gt;</msg>
+<status status="PASS" starttime="20210708 16:19:11.359" endtime="20210708 16:19:11.359"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>deviceName=${mobile}</arg>
+</arguments>
+<assign>
+<var>&amp;{mobile_emulation}</var>
+</assign>
+<msg timestamp="20210708 16:19:11.359" level="INFO">&amp;{mobile_emulation} = { deviceName=Galaxy S5 }</msg>
+<status status="PASS" starttime="20210708 16:19:11.359" endtime="20210708 16:19:11.360"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${options}</arg>
+<arg>add_experimental_option</arg>
+<arg>mobileEmulation</arg>
+<arg>${mobile_emulation}</arg>
+</arguments>
+<status status="PASS" starttime="20210708 16:19:11.360" endtime="20210708 16:19:11.360"></status>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<arguments>
+<arg>Chrome</arg>
+<arg>chrome_options=${options}</arg>
+</arguments>
+<msg timestamp="20210708 16:19:11.360" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20210708 16:19:11.360" endtime="20210708 16:19:13.080"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+</arguments>
+<msg timestamp="20210708 16:19:13.081" level="INFO">Opening url 'https://rc-webm.rctiplus.com'</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210708 16:19:16.635" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-49.png"&gt;&lt;img src="selenium-screenshot-49.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210708 16:19:15.123" endtime="20210708 16:19:16.635"></status>
+</kw>
+<msg timestamp="20210708 16:19:16.637" level="FAIL">WebDriverException: Message: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=91.0.4472.124)
+</msg>
+<status status="FAIL" starttime="20210708 16:19:13.080" endtime="20210708 16:19:16.637"></status>
+</kw>
+<status status="FAIL" starttime="20210708 16:19:11.358" endtime="20210708 16:19:16.638"></status>
+</kw>
+<kw name="Close my Browser" library="Setup" type="teardown">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20210708 16:19:16.639" endtime="20210708 16:19:18.970"></status>
+</kw>
+<status status="PASS" starttime="20210708 16:19:16.638" endtime="20210708 16:19:18.970"></status>
+</kw>
+<status status="FAIL" starttime="20210708 16:19:11.358" endtime="20210708 16:19:18.971" critical="yes">Setup failed:
+WebDriverException: Message: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=91.0.4472.124)
+</status>
+</test>
+<status status="FAIL" starttime="20210708 16:18:58.634" endtime="20210708 16:19:18.972"></status>
+</suite>
+<status status="FAIL" starttime="20210708 16:18:58.632" endtime="20210708 16:19:18.973"></status>
+</suite>
+<suite id="s1-s2" name="Login" source="D:\webm\features\login">
+<suite id="s1-s2-s1" name="LoginTest" source="D:\webm\features\login\LoginTest.robot">
+<test id="s1-s2-s1-t1" name="Login with valid email">
+<kw name="Chrome Mobile Go To URL" library="Setup" type="setup">
+<doc>Starts a Chrome Browser in Mobile Emulation with specified device model</doc>
+<arguments>
+<arg>${siteUrl}</arg>
+</arguments>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys</arg>
+</arguments>
+<assign>
+<var>${options}</var>
+</assign>
+<msg timestamp="20210708 16:19:18.987" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000027C72C2B760&gt;</msg>
+<status status="PASS" starttime="20210708 16:19:18.986" endtime="20210708 16:19:18.987"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>deviceName=${mobile}</arg>
+</arguments>
+<assign>
+<var>&amp;{mobile_emulation}</var>
+</assign>
+<msg timestamp="20210708 16:19:18.988" level="INFO">&amp;{mobile_emulation} = { deviceName=Galaxy S5 }</msg>
+<status status="PASS" starttime="20210708 16:19:18.987" endtime="20210708 16:19:18.988"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${options}</arg>
+<arg>add_experimental_option</arg>
+<arg>mobileEmulation</arg>
+<arg>${mobile_emulation}</arg>
+</arguments>
+<status status="PASS" starttime="20210708 16:19:18.988" endtime="20210708 16:19:18.988"></status>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<arguments>
+<arg>Chrome</arg>
+<arg>chrome_options=${options}</arg>
+</arguments>
+<msg timestamp="20210708 16:19:18.989" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20210708 16:19:18.989" endtime="20210708 16:19:20.800"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+</arguments>
+<msg timestamp="20210708 16:19:20.801" level="INFO">Opening url 'https://rc-webm.rctiplus.com/login'</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210708 16:19:23.163" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-50.png"&gt;&lt;img src="selenium-screenshot-50.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210708 16:19:22.655" endtime="20210708 16:19:23.163"></status>
+</kw>
+<msg timestamp="20210708 16:19:23.166" level="FAIL">WebDriverException: Message: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=91.0.4472.124)
+</msg>
+<status status="FAIL" starttime="20210708 16:19:20.800" endtime="20210708 16:19:23.166"></status>
+</kw>
+<status status="FAIL" starttime="20210708 16:19:18.986" endtime="20210708 16:19:23.166"></status>
+</kw>
+<kw name="Close my Browser" library="Setup" type="teardown">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20210708 16:19:23.167" endtime="20210708 16:19:25.502"></status>
+</kw>
+<status status="PASS" starttime="20210708 16:19:23.167" endtime="20210708 16:19:25.502"></status>
+</kw>
+<status status="FAIL" starttime="20210708 16:19:18.986" endtime="20210708 16:19:25.502" critical="yes">Setup failed:
+WebDriverException: Message: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=91.0.4472.124)
+</status>
+</test>
+<test id="s1-s2-s1-t2" name="Login with valid phone number">
+<kw name="Chrome Mobile Go To URL" library="Setup" type="setup">
+<doc>Starts a Chrome Browser in Mobile Emulation with specified device model</doc>
+<arguments>
+<arg>${siteUrl}</arg>
+</arguments>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys</arg>
+</arguments>
+<assign>
+<var>${options}</var>
+</assign>
+<msg timestamp="20210708 16:19:25.504" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000027C72CB0B50&gt;</msg>
+<status status="PASS" starttime="20210708 16:19:25.504" endtime="20210708 16:19:25.504"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>deviceName=${mobile}</arg>
+</arguments>
+<assign>
+<var>&amp;{mobile_emulation}</var>
+</assign>
+<msg timestamp="20210708 16:19:25.505" level="INFO">&amp;{mobile_emulation} = { deviceName=Galaxy S5 }</msg>
+<status status="PASS" starttime="20210708 16:19:25.505" endtime="20210708 16:19:25.505"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${options}</arg>
+<arg>add_experimental_option</arg>
+<arg>mobileEmulation</arg>
+<arg>${mobile_emulation}</arg>
+</arguments>
+<status status="PASS" starttime="20210708 16:19:25.505" endtime="20210708 16:19:25.505"></status>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<arguments>
+<arg>Chrome</arg>
+<arg>chrome_options=${options}</arg>
+</arguments>
+<msg timestamp="20210708 16:19:25.506" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20210708 16:19:25.505" endtime="20210708 16:19:27.203"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+</arguments>
+<msg timestamp="20210708 16:19:27.204" level="INFO">Opening url 'https://rc-webm.rctiplus.com/login'</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210708 16:19:28.347" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-51.png"&gt;&lt;img src="selenium-screenshot-51.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210708 16:19:27.713" endtime="20210708 16:19:28.348"></status>
+</kw>
+<msg timestamp="20210708 16:19:28.349" level="FAIL">WebDriverException: Message: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=91.0.4472.124)
+</msg>
+<status status="FAIL" starttime="20210708 16:19:27.203" endtime="20210708 16:19:28.349"></status>
+</kw>
+<status status="FAIL" starttime="20210708 16:19:25.503" endtime="20210708 16:19:28.349"></status>
+</kw>
+<kw name="Close my Browser" library="Setup" type="teardown">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20210708 16:19:28.350" endtime="20210708 16:19:30.623"></status>
+</kw>
+<status status="PASS" starttime="20210708 16:19:28.350" endtime="20210708 16:19:30.623"></status>
+</kw>
+<status status="FAIL" starttime="20210708 16:19:25.502" endtime="20210708 16:19:30.623" critical="yes">Setup failed:
+WebDriverException: Message: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=91.0.4472.124)
+</status>
+</test>
+<test id="s1-s2-s1-t3" name="Login with incorrect email">
+<kw name="Chrome Mobile Go To URL" library="Setup" type="setup">
+<doc>Starts a Chrome Browser in Mobile Emulation with specified device model</doc>
+<arguments>
+<arg>${siteUrl}</arg>
+</arguments>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys</arg>
+</arguments>
+<assign>
+<var>${options}</var>
+</assign>
+<msg timestamp="20210708 16:19:30.625" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000027C72C2B550&gt;</msg>
+<status status="PASS" starttime="20210708 16:19:30.624" endtime="20210708 16:19:30.625"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>deviceName=${mobile}</arg>
+</arguments>
+<assign>
+<var>&amp;{mobile_emulation}</var>
+</assign>
+<msg timestamp="20210708 16:19:30.625" level="INFO">&amp;{mobile_emulation} = { deviceName=Galaxy S5 }</msg>
+<status status="PASS" starttime="20210708 16:19:30.625" endtime="20210708 16:19:30.625"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${options}</arg>
+<arg>add_experimental_option</arg>
+<arg>mobileEmulation</arg>
+<arg>${mobile_emulation}</arg>
+</arguments>
+<status status="PASS" starttime="20210708 16:19:30.625" endtime="20210708 16:19:30.626"></status>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<arguments>
+<arg>Chrome</arg>
+<arg>chrome_options=${options}</arg>
+</arguments>
+<msg timestamp="20210708 16:19:30.626" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20210708 16:19:30.626" endtime="20210708 16:19:32.358"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+</arguments>
+<msg timestamp="20210708 16:19:32.359" level="INFO">Opening url 'https://rc-webm.rctiplus.com/login'</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210708 16:19:33.498" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-52.png"&gt;&lt;img src="selenium-screenshot-52.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210708 16:19:32.903" endtime="20210708 16:19:33.499"></status>
+</kw>
+<msg timestamp="20210708 16:19:33.501" level="FAIL">WebDriverException: Message: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=91.0.4472.124)
+</msg>
+<status status="FAIL" starttime="20210708 16:19:32.358" endtime="20210708 16:19:33.502"></status>
+</kw>
+<status status="FAIL" starttime="20210708 16:19:30.624" endtime="20210708 16:19:33.502"></status>
+</kw>
+<kw name="Close my Browser" library="Setup" type="teardown">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20210708 16:19:33.504" endtime="20210708 16:19:35.811"></status>
+</kw>
+<status status="PASS" starttime="20210708 16:19:33.503" endtime="20210708 16:19:35.811"></status>
+</kw>
+<status status="FAIL" starttime="20210708 16:19:30.623" endtime="20210708 16:19:35.811" critical="yes">Setup failed:
+WebDriverException: Message: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=91.0.4472.124)
+</status>
+</test>
+<test id="s1-s2-s1-t4" name="Login with incorrect phone number">
+<kw name="Chrome Mobile Go To URL" library="Setup" type="setup">
+<doc>Starts a Chrome Browser in Mobile Emulation with specified device model</doc>
+<arguments>
+<arg>${siteUrl}</arg>
+</arguments>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys</arg>
+</arguments>
+<assign>
+<var>${options}</var>
+</assign>
+<msg timestamp="20210708 16:19:35.814" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000027C72CBDA00&gt;</msg>
+<status status="PASS" starttime="20210708 16:19:35.814" endtime="20210708 16:19:35.814"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>deviceName=${mobile}</arg>
+</arguments>
+<assign>
+<var>&amp;{mobile_emulation}</var>
+</assign>
+<msg timestamp="20210708 16:19:35.815" level="INFO">&amp;{mobile_emulation} = { deviceName=Galaxy S5 }</msg>
+<status status="PASS" starttime="20210708 16:19:35.814" endtime="20210708 16:19:35.815"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${options}</arg>
+<arg>add_experimental_option</arg>
+<arg>mobileEmulation</arg>
+<arg>${mobile_emulation}</arg>
+</arguments>
+<status status="PASS" starttime="20210708 16:19:35.815" endtime="20210708 16:19:35.816"></status>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<arguments>
+<arg>Chrome</arg>
+<arg>chrome_options=${options}</arg>
+</arguments>
+<msg timestamp="20210708 16:19:35.816" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20210708 16:19:35.816" endtime="20210708 16:19:37.534"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+</arguments>
+<msg timestamp="20210708 16:19:37.535" level="INFO">Opening url 'https://rc-webm.rctiplus.com/login'</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210708 16:19:39.221" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-53.png"&gt;&lt;img src="selenium-screenshot-53.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210708 16:19:38.399" endtime="20210708 16:19:39.222"></status>
+</kw>
+<msg timestamp="20210708 16:19:39.227" level="FAIL">WebDriverException: Message: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=91.0.4472.124)
+</msg>
+<status status="FAIL" starttime="20210708 16:19:37.534" endtime="20210708 16:19:39.228"></status>
+</kw>
+<status status="FAIL" starttime="20210708 16:19:35.813" endtime="20210708 16:19:39.228"></status>
+</kw>
+<kw name="Close my Browser" library="Setup" type="teardown">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20210708 16:19:39.230" endtime="20210708 16:19:41.491"></status>
+</kw>
+<status status="PASS" starttime="20210708 16:19:39.229" endtime="20210708 16:19:41.491"></status>
+</kw>
+<status status="FAIL" starttime="20210708 16:19:35.812" endtime="20210708 16:19:41.491" critical="yes">Setup failed:
+WebDriverException: Message: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=91.0.4472.124)
+</status>
+</test>
+<test id="s1-s2-s1-t5" name="Login with incorrect password">
+<kw name="Chrome Mobile Go To URL" library="Setup" type="setup">
+<doc>Starts a Chrome Browser in Mobile Emulation with specified device model</doc>
+<arguments>
+<arg>${siteUrl}</arg>
+</arguments>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys</arg>
+</arguments>
+<assign>
+<var>${options}</var>
+</assign>
+<msg timestamp="20210708 16:19:41.493" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000027C72CB0670&gt;</msg>
+<status status="PASS" starttime="20210708 16:19:41.493" endtime="20210708 16:19:41.493"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>deviceName=${mobile}</arg>
+</arguments>
+<assign>
+<var>&amp;{mobile_emulation}</var>
+</assign>
+<msg timestamp="20210708 16:19:41.494" level="INFO">&amp;{mobile_emulation} = { deviceName=Galaxy S5 }</msg>
+<status status="PASS" starttime="20210708 16:19:41.493" endtime="20210708 16:19:41.494"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${options}</arg>
+<arg>add_experimental_option</arg>
+<arg>mobileEmulation</arg>
+<arg>${mobile_emulation}</arg>
+</arguments>
+<status status="PASS" starttime="20210708 16:19:41.494" endtime="20210708 16:19:41.494"></status>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<arguments>
+<arg>Chrome</arg>
+<arg>chrome_options=${options}</arg>
+</arguments>
+<msg timestamp="20210708 16:19:41.494" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20210708 16:19:41.494" endtime="20210708 16:19:43.152"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+</arguments>
+<msg timestamp="20210708 16:19:43.153" level="INFO">Opening url 'https://rc-webm.rctiplus.com/login'</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210708 16:19:44.472" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-54.png"&gt;&lt;img src="selenium-screenshot-54.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210708 16:19:43.687" endtime="20210708 16:19:44.472"></status>
+</kw>
+<msg timestamp="20210708 16:19:44.474" level="FAIL">WebDriverException: Message: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=91.0.4472.124)
+</msg>
+<status status="FAIL" starttime="20210708 16:19:43.152" endtime="20210708 16:19:44.474"></status>
+</kw>
+<status status="FAIL" starttime="20210708 16:19:41.492" endtime="20210708 16:19:44.475"></status>
+</kw>
+<kw name="Close my Browser" library="Setup" type="teardown">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20210708 16:19:44.475" endtime="20210708 16:19:46.688"></status>
+</kw>
+<status status="PASS" starttime="20210708 16:19:44.475" endtime="20210708 16:19:46.689"></status>
+</kw>
+<status status="FAIL" starttime="20210708 16:19:41.492" endtime="20210708 16:19:46.689" critical="yes">Setup failed:
+WebDriverException: Message: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=91.0.4472.124)
+</status>
+</test>
+<status status="FAIL" starttime="20210708 16:19:18.978" endtime="20210708 16:19:46.690"></status>
+</suite>
+<status status="FAIL" starttime="20210708 16:19:18.975" endtime="20210708 16:19:46.692"></status>
+</suite>
+<status status="FAIL" starttime="20210708 16:18:58.603" endtime="20210708 16:19:46.694"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="7">Critical Tests</stat>
+<stat pass="0" fail="7">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="7" id="s1" name="Features">Features</stat>
+<stat pass="0" fail="2" id="s1-s1" name="Live Chat">Features.Live Chat</stat>
+<stat pass="0" fail="2" id="s1-s1-s1" name="live chatTest">Features.Live Chat.live chatTest</stat>
+<stat pass="0" fail="5" id="s1-s2" name="Login">Features.Login</stat>
+<stat pass="0" fail="5" id="s1-s2-s1" name="LoginTest">Features.Login.LoginTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
