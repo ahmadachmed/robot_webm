@@ -10,6 +10,8 @@ ${accountbtn}   id:action-account
 ${livetvbtn}    id:action-live-tv
 ${rctichannel}  xpath://h1[contains(text(),'RCTI')]
 ${mnctvchannel}  xpath://h1[contains(text(),'MNCTV')]
+${gtvchannel}  xpath://h1[contains(text(),'GTV')]
+${iNewschannel}  xpath://h1[contains(text(),'INEWS')]
 ${livechatbtn}      id:btn-expand
 ${chatinput}    id:chat-input
 ${chatoutput}   xpath://span[contains(text(),'TestBot')]
@@ -37,6 +39,18 @@ user go to the "MNCTV" channel
     click element   ${livetvbtn}
     wait until element is visible   ${mnctvchannel}     15 seconds
     click element   ${mnctvchannel}
+
+user go to the "GTV" channel
+    wait until element is visible   ${livetvbtn}    15 seconds
+    click element   ${livetvbtn}
+    wait until element is visible   ${gtvchannel}     15 seconds
+    click element   ${gtvchannel}
+
+user go to the "iNews" channel
+    wait until element is visible   ${livetvbtn}    15 seconds
+    click element   ${livetvbtn}
+    wait until element is visible   ${iNewschannel}     15 seconds
+    click element   ${iNewschannel}
 
 
 user send "TestBot" on the chat
