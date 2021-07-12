@@ -10,3 +10,11 @@
         System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "")
     5. open html-report it will show as expected.
     ```
+* To run the batch file in jenkins
+    ```sh
+    1. Open your project config
+    2. Go to Build menu, click add build step and choose Execute windows batch
+    3. in that command paste below line.
+        cd \Regression.bat
+    4. Now your build process will require from the bat file
+    ```
