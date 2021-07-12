@@ -1,2 +1,1 @@
-cd D:\webm\features
-robot -d ../results .
+robot -d results features/.
