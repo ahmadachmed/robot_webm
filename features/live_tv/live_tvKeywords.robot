@@ -32,7 +32,7 @@ user in live TV "iNews" Channel
 
 user click play/pause player
     set selenium speed  1 second
-    sleep   40 seconds
+    sleep   30 seconds
     click element   ${player}
     click element   ${playpause}
 

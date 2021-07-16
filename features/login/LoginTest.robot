@@ -1,5 +1,4 @@
 *** Settings ***
-
 Library     SeleniumLibrary
 Resource    LoginKeywords.robot
 Resource    ../../resources/Setup.robot
