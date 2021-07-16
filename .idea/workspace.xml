@@ -16,12 +16,20 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/main" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b133550-c664-463d-b9ad-ae3763f96f05" name="Default Changelist" comment="first commit">
-      <change beforePath="$PROJECT_DIR$/features/live_tv/live_tvKeywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/features/live_tv/live_tvKeywords.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/login/LoginTest.robot" beforeDir="false" afterPath="$PROJECT_DIR$/features/login/LoginTest.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Regression.bat" beforeDir="false" afterPath="$PROJECT_DIR$/Regression.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/catch_up/catch_upKeywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/features/catch_up/catch_upKeywords.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/Setup.robot" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Setup.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/results/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/results/log.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/results/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/results/output.xml" afterDir="false" />
@@ -61,7 +69,7 @@
       <recent name="D:\webm\features\login" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Batch.Regression">
     <configuration name="Regression" type="BatchConfigurationType" factoryName="Batch">
       <module name="webm" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -71,6 +79,19 @@
       <option name="PARAMETERS" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="parallel_execution" type="BatchConfigurationType" factoryName="Batch">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/" />
+      <option name="PARENT_ENVS" value="true" />
+      <module name="" />
+      <option name="SCRIPT_NAME" value="parallel_execution.bat" />
+      <option name="PARAMETERS" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Batch.Regression" />
+      <item itemvalue="Batch.parallel_execution" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -102,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626425214817</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="first commit">
+      <created>1626432309781</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1626432309782</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -110,7 +138,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -122,10 +162,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="first commit" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1625649710212">
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1626439523509">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1625649710212" />
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1626439523509" />
     <state x="100" y="100" width="1720" height="840" key="DiffContextDialog" timestamp="1626087975544">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -134,30 +174,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="262" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1623145217942" />
-    <state width="1882" height="278" key="GridCell.Tab.0.bottom" timestamp="1626431071036">
+    <state width="1896" height="280" key="GridCell.Tab.0.bottom" timestamp="1626444784604">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1882" height="278" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1626431071036" />
-    <state width="1882" height="278" key="GridCell.Tab.0.center" timestamp="1626431071036">
+    <state width="1896" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1626444784604" />
+    <state width="1896" height="280" key="GridCell.Tab.0.center" timestamp="1626444784604">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1882" height="278" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1626431071036" />
-    <state width="1882" height="278" key="GridCell.Tab.0.left" timestamp="1626431071035">
+    <state width="1896" height="280" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1626444784604" />
+    <state width="1896" height="280" key="GridCell.Tab.0.left" timestamp="1626444784604">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1882" height="278" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1626431071035" />
-    <state width="1882" height="278" key="GridCell.Tab.0.right" timestamp="1626431071036">
+    <state width="1896" height="280" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1626444784604" />
+    <state width="1896" height="280" key="GridCell.Tab.0.right" timestamp="1626444784604">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1882" height="278" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1626431071036" />
-    <state x="807" y="222" key="RollbackChangesDialog" timestamp="1626081752551">
+    <state width="1896" height="280" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1626444784604" />
+    <state x="807" y="222" key="RollbackChangesDialog" timestamp="1626432475066">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="807" y="222" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1626081752551" />
-    <state x="552" y="240" key="Vcs.Push.Dialog.v2" timestamp="1626425300147">
+    <state x="807" y="222" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1626432475066" />
+    <state x="552" y="240" key="Vcs.Push.Dialog.v2" timestamp="1626432330397">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="240" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1626425300147" />
+    <state x="552" y="240" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1626432330397" />
     <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1626087662230">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

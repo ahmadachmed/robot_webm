@@ -21,23 +21,29 @@ user in catch up "RCTI" Channel
     click element   ${catchuptv}
 
 user in catch up "MNCTV" Channel
+    set selenium speed      0.5 seconds
     click element   ${livetvbtn}
-    sleep   10 seconds
+#   sleep   5 seconds
     click element   ${mnctvchannel}
+#   sleep   5 seconds
     wait until element is visible   ${catchuptv}    20 seconds
     click element   ${catchuptv}
 
 user in catch up "GTV" Channel
+    set selenium speed      0.5 seconds
     click element   ${livetvbtn}
-    sleep   10 seconds
+#    sleep   5 seconds
     click element   ${gtvchannel}
+#    sleep   5 seconds
     wait until element is visible   ${catchuptv}    20 seconds
     click element   ${catchuptv}
 
 user in catch up "iNews" Channel
+    set selenium speed      0.5 seconds
     click element   ${livetvbtn}
-    sleep   10 seconds
+#    sleep   5 seconds
     click element   ${iNewschannel}
+#    sleep   5 seconds
     wait until element is visible   ${catchuptv}    20 seconds
     click element   ${catchuptv}
 
@@ -46,7 +52,7 @@ When user play one of title from the list
     click element   ${catchupfirst}
 
 user click play/pause player
-    set selenium speed  1 second
+    set selenium speed  0.5 second
     sleep   30 seconds
     wait until element is visible   ${player}   20 seconds
     click element   ${player}
