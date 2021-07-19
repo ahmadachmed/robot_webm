@@ -12,10 +12,15 @@ ${siteUrl}  https://rc-webm.rctiplus.com
 *** Test Cases ***
 Success search Program
     Given user in the search page
-    When user search "Upin" from the Program bar
+    When user search "Upin" from the Program tab
     Then user validate the program result
 
 Success search Episode
     Given user in the search page
-    When user search "Upin" from the episode bar
+    When user search "Upin" from the episode tab
     Then user validate the episode result
+
+Success search Extra
+    Given user in the search page
+    When user search "KDI" from the extra tab
+    Then user validate the extra result
