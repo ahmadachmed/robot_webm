@@ -3,7 +3,7 @@ Library     SeleniumLibrary
 
 *** Keywords ***
 Chrome Mobile Go To URL
-    [Arguments]    ${url}    ${mobile}=Galaxy S5
+    [Arguments]    ${url}       ${mobile}=Galaxy S5
     [Documentation]    Starts a Chrome Browser in Mobile Emulation with specified device model
     ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
     &{mobile_emulation}=    Create Dictionary    deviceName=${mobile}
