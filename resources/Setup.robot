@@ -16,8 +16,8 @@ Chrome Mobile Go To URL
     #Call Method    ${options}   add_argument    headless
 
     ${desiredcap}=     Call Method     ${options}    to_capabilities
-    #Create Webdriver    Chrome    chrome_options=${options}     desired_capabilities=${desiredcap}                                   # to run locally
-    Create Webdriver     Remote   command_executor=http://localhost:4444/wd/hub      desired_capabilities=${desiredcap}                  # to run remotely
+    Create Webdriver    Chrome    chrome_options=${options}     desired_capabilities=${desiredcap}                                   # to run locally
+    #Create Webdriver     Remote   command_executor=http://localhost:4444/wd/hub      desired_capabilities=${desiredcap}                  # to run remotely
     #Create Webdriver    Remote   command_executor=http://selenium.mncplus/wd/hub    desired_capabilities=${desiredcap}               # to run from mncplus server
 
     GoTo    ${url}
