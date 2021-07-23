@@ -1,0 +1,29 @@
+==============================================================================
+Features                                                                      
+==============================================================================
+Features.Catch Up                                                             
+==============================================================================
+Features.Catch Up.catch upTest                                                
+==============================================================================
+Watch Catch Up TV from "RCTI" Channel                                 | PASS |
+------------------------------------------------------------------------------
+Watch Catch Up TV from "MNCTV" Channel                                | PASS |
+------------------------------------------------------------------------------
+Watch Catch Up TV from "GTV" Channel                                  | PASS |
+------------------------------------------------------------------------------
+Watch Catch Up TV from "iNews" Channel                                | FAIL |
+Element 'xpath://body/div[@id='__next']/div[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[2]' not visible after 20 seconds.
+------------------------------------------------------------------------------
+Features.Catch Up.catch upTest                                        | FAIL |
+4 critical tests, 3 passed, 1 failed
+4 tests total, 3 passed, 1 failed
+==============================================================================
+Features.Catch Up                                                     | FAIL |
+4 critical tests, 3 passed, 1 failed
+4 tests total, 3 passed, 1 failed
+==============================================================================
+Features                                                              | FAIL |
+4 critical tests, 3 passed, 1 failed
+4 tests total, 3 passed, 1 failed
+==============================================================================
+Output:  D:\webm\results\pabot_results\0\output.xml

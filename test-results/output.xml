@@ -1,0 +1,864 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.8.6 on win32)" generated="20210721 19:11:02.948" rpa="false">
+<suite id="s1" name="searchTest" source="D:\webm\features\search\searchTest.robot">
+<test id="s1-t1" name="Success search Program">
+<kw name="Chrome Mobile Go To URL" library="Setup" type="setup">
+<doc>Starts a Chrome Browser in Mobile Emulation with specified device model</doc>
+<arguments>
+<arg>${siteUrl}</arg>
+</arguments>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+</arguments>
+<assign>
+<var>${options}</var>
+</assign>
+<msg timestamp="20210721 19:11:05.937" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002643DFD5610&gt;</msg>
+<status status="PASS" starttime="20210721 19:11:05.937" endtime="20210721 19:11:05.937"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>deviceName=${mobile}</arg>
+</arguments>
+<assign>
+<var>&amp;{mobile_emulation}</var>
+</assign>
+<msg timestamp="20210721 19:11:05.937" level="INFO">&amp;{mobile_emulation} = { deviceName=Galaxy S5 }</msg>
+<status status="PASS" starttime="20210721 19:11:05.937" endtime="20210721 19:11:05.937"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${options}</arg>
+<arg>add_experimental_option</arg>
+<arg>mobileEmulation</arg>
+<arg>${mobile_emulation}</arg>
+</arguments>
+<status status="PASS" starttime="20210721 19:11:05.937" endtime="20210721 19:11:05.937"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>disable-gpu</arg>
+</arguments>
+<status status="PASS" starttime="20210721 19:11:05.937" endtime="20210721 19:11:05.937"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>disable-popup-blocking</arg>
+</arguments>
+<status status="PASS" starttime="20210721 19:11:05.937" endtime="20210721 19:11:05.937"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>no-sandbox</arg>
+</arguments>
+<status status="PASS" starttime="20210721 19:11:05.937" endtime="20210721 19:11:05.937"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>disable-infobars</arg>
+</arguments>
+<status status="PASS" starttime="20210721 19:11:05.937" endtime="20210721 19:11:05.937"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${options}</arg>
+<arg>to_capabilities</arg>
+</arguments>
+<assign>
+<var>${desiredcap}</var>
+</assign>
+<msg timestamp="20210721 19:11:05.937" level="INFO">${desiredcap} = {'browserName': 'chrome', 'version': '', 'platform': 'ANY', 'goog:chromeOptions': {'mobileEmulation': {'deviceName': 'Galaxy S5'}, 'extensions': [], 'args': ['disable-gpu', 'disable-popup-blocking', '...</msg>
+<status status="PASS" starttime="20210721 19:11:05.937" endtime="20210721 19:11:05.937"></status>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<arguments>
+<arg>Chrome</arg>
+<arg>chrome_options=${options}</arg>
+<arg>desired_capabilities=${desiredcap}</arg>
+</arguments>
+<msg timestamp="20210721 19:11:05.937" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20210721 19:11:05.937" endtime="20210721 19:11:10.553"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+</arguments>
+<msg timestamp="20210721 19:11:10.553" level="INFO">Opening url 'https://rc-webm.rctiplus.com'</msg>
+<status status="PASS" starttime="20210721 19:11:10.553" endtime="20210721 19:11:18.763"></status>
+</kw>
+<status status="PASS" starttime="20210721 19:11:05.936" endtime="20210721 19:11:18.763"></status>
+</kw>
+<kw name="Given user in the search page" library="searchKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${searchbar}</arg>
+<arg>20 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20210721 19:11:18.763" endtime="20210721 19:11:21.788"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${searchbar}</arg>
+</arguments>
+<msg timestamp="20210721 19:11:21.790" level="INFO">Clicking element 'xpath://div[contains(text(),'rctiplus.com')]'.</msg>
+<status status="PASS" starttime="20210721 19:11:21.789" endtime="20210721 19:11:24.618"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5 seconds</arg>
+</arguments>
+<msg timestamp="20210721 19:11:29.633" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210721 19:11:24.618" endtime="20210721 19:11:29.633"></status>
+</kw>
+<status status="PASS" starttime="20210721 19:11:18.763" endtime="20210721 19:11:29.634"></status>
+</kw>
+<kw name="When user search &quot;Upin&quot; from the Program tab" library="searchKeywords">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${inputsearch}</arg>
+<arg>upin &amp; ipin</arg>
+</arguments>
+<msg timestamp="20210721 19:11:29.635" level="INFO">Typing text 'upin &amp; ipin' into text field 'xpath://input[@placeholder='Search for a program, genre, etc.']'.</msg>
+<status status="PASS" starttime="20210721 19:11:29.635" endtime="20210721 19:11:30.116"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${firstcontent}</arg>
+<arg>20 second</arg>
+</arguments>
+<status status="PASS" starttime="20210721 19:11:30.116" endtime="20210721 19:11:32.676"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${searchresult}</arg>
+</arguments>
+<msg timestamp="20210721 19:11:32.698" level="INFO">Current page contains element 'xpath://div[@class='tab-pane active']//p[@class='title'][contains(text(),'Search Result')]'.</msg>
+<status status="PASS" starttime="20210721 19:11:32.677" endtime="20210721 19:11:32.699"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${firstcontent}</arg>
+</arguments>
+<msg timestamp="20210721 19:11:32.701" level="INFO">Clicking element 'xpath://div[@class='tab-pane active']//div[@class='content-list']//div[2]//img[1]'.</msg>
+<status status="PASS" starttime="20210721 19:11:32.700" endtime="20210721 19:11:35.706"></status>
+</kw>
+<status status="PASS" starttime="20210721 19:11:29.635" endtime="20210721 19:11:35.706"></status>
+</kw>
+<kw name="Then user validate the program result" library="searchKeywords">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5 seconds</arg>
+</arguments>
+<msg timestamp="20210721 19:11:40.710" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210721 19:11:35.707" endtime="20210721 19:11:40.710"></status>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${title}</arg>
+<arg>Upin &amp; Ipin</arg>
+</arguments>
+<msg timestamp="20210721 19:11:40.825" level="INFO">Element 'xpath://h1[@class='content-title']' contains text 'Upin &amp; Ipin'.</msg>
+<status status="PASS" starttime="20210721 19:11:40.710" endtime="20210721 19:11:40.825"></status>
+</kw>
+<status status="PASS" starttime="20210721 19:11:35.707" endtime="20210721 19:11:40.826"></status>
+</kw>
+<kw name="Close my Browser" library="Setup" type="teardown">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20210721 19:11:40.826" endtime="20210721 19:11:45.374"></status>
+</kw>
+<status status="PASS" starttime="20210721 19:11:40.826" endtime="20210721 19:11:45.375"></status>
+</kw>
+<status status="PASS" starttime="20210721 19:11:05.934" endtime="20210721 19:11:45.376" critical="yes"></status>
+</test>
+<test id="s1-t2" name="Success search Episode">
+<kw name="Chrome Mobile Go To URL" library="Setup" type="setup">
+<doc>Starts a Chrome Browser in Mobile Emulation with specified device model</doc>
+<arguments>
+<arg>${siteUrl}</arg>
+</arguments>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+</arguments>
+<assign>
+<var>${options}</var>
+</assign>
+<msg timestamp="20210721 19:11:45.379" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002643DFD5E20&gt;</msg>
+<status status="PASS" starttime="20210721 19:11:45.379" endtime="20210721 19:11:45.379"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>deviceName=${mobile}</arg>
+</arguments>
+<assign>
+<var>&amp;{mobile_emulation}</var>
+</assign>
+<msg timestamp="20210721 19:11:45.379" level="INFO">&amp;{mobile_emulation} = { deviceName=Galaxy S5 }</msg>
+<status status="PASS" starttime="20210721 19:11:45.379" endtime="20210721 19:11:45.379"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${options}</arg>
+<arg>add_experimental_option</arg>
+<arg>mobileEmulation</arg>
+<arg>${mobile_emulation}</arg>
+</arguments>
+<status status="PASS" starttime="20210721 19:11:45.379" endtime="20210721 19:11:45.379"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>disable-gpu</arg>
+</arguments>
+<status status="PASS" starttime="20210721 19:11:45.379" endtime="20210721 19:11:45.379"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>disable-popup-blocking</arg>
+</arguments>
+<status status="PASS" starttime="20210721 19:11:45.379" endtime="20210721 19:11:45.379"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>no-sandbox</arg>
+</arguments>
+<status status="PASS" starttime="20210721 19:11:45.379" endtime="20210721 19:11:45.379"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>disable-infobars</arg>
+</arguments>
+<status status="PASS" starttime="20210721 19:11:45.379" endtime="20210721 19:11:45.379"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${options}</arg>
+<arg>to_capabilities</arg>
+</arguments>
+<assign>
+<var>${desiredcap}</var>
+</assign>
+<msg timestamp="20210721 19:11:45.379" level="INFO">${desiredcap} = {'browserName': 'chrome', 'version': '', 'platform': 'ANY', 'goog:chromeOptions': {'mobileEmulation': {'deviceName': 'Galaxy S5'}, 'extensions': [], 'args': ['disable-gpu', 'disable-popup-blocking', '...</msg>
+<status status="PASS" starttime="20210721 19:11:45.379" endtime="20210721 19:11:45.379"></status>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<arguments>
+<arg>Chrome</arg>
+<arg>chrome_options=${options}</arg>
+<arg>desired_capabilities=${desiredcap}</arg>
+</arguments>
+<msg timestamp="20210721 19:11:45.379" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20210721 19:11:45.379" endtime="20210721 19:11:47.138"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+</arguments>
+<msg timestamp="20210721 19:11:47.139" level="INFO">Opening url 'https://rc-webm.rctiplus.com'</msg>
+<status status="PASS" starttime="20210721 19:11:47.138" endtime="20210721 19:11:56.824"></status>
+</kw>
+<status status="PASS" starttime="20210721 19:11:45.379" endtime="20210721 19:11:56.825"></status>
+</kw>
+<kw name="Given user in the search page" library="searchKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${searchbar}</arg>
+<arg>20 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20210721 19:11:56.826" endtime="20210721 19:11:56.883"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${searchbar}</arg>
+</arguments>
+<msg timestamp="20210721 19:11:56.884" level="INFO">Clicking element 'xpath://div[contains(text(),'rctiplus.com')]'.</msg>
+<status status="PASS" starttime="20210721 19:11:56.883" endtime="20210721 19:11:58.772"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5 seconds</arg>
+</arguments>
+<msg timestamp="20210721 19:12:03.788" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210721 19:11:58.772" endtime="20210721 19:12:03.789"></status>
+</kw>
+<status status="PASS" starttime="20210721 19:11:56.826" endtime="20210721 19:12:03.789"></status>
+</kw>
+<kw name="When user search &quot;Upin&quot; from the episode tab" library="searchKeywords">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${inputsearch}</arg>
+<arg>upin</arg>
+</arguments>
+<msg timestamp="20210721 19:12:03.792" level="INFO">Typing text 'upin' into text field 'xpath://input[@placeholder='Search for a program, genre, etc.']'.</msg>
+<status status="PASS" starttime="20210721 19:12:03.792" endtime="20210721 19:12:03.979"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${firstcontent}</arg>
+<arg>20 second</arg>
+</arguments>
+<status status="PASS" starttime="20210721 19:12:03.979" endtime="20210721 19:12:06.534"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${episodetab}</arg>
+</arguments>
+<msg timestamp="20210721 19:12:06.535" level="INFO">Clicking element 'xpath://a[contains(text(),'Episode')]'.</msg>
+<status status="PASS" starttime="20210721 19:12:06.534" endtime="20210721 19:12:07.010"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${firstcontent}</arg>
+<arg>20 second</arg>
+</arguments>
+<status status="PASS" starttime="20210721 19:12:07.011" endtime="20210721 19:12:07.062"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${searchresult}</arg>
+</arguments>
+<msg timestamp="20210721 19:12:07.085" level="INFO">Current page contains element 'xpath://div[@class='tab-pane active']//p[@class='title'][contains(text(),'Search Result')]'.</msg>
+<status status="PASS" starttime="20210721 19:12:07.062" endtime="20210721 19:12:07.085"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${firstcontent}</arg>
+</arguments>
+<msg timestamp="20210721 19:12:07.086" level="INFO">Clicking element 'xpath://div[@class='tab-pane active']//div[@class='content-list']//div[2]//img[1]'.</msg>
+<status status="PASS" starttime="20210721 19:12:07.086" endtime="20210721 19:12:10.379"></status>
+</kw>
+<status status="PASS" starttime="20210721 19:12:03.791" endtime="20210721 19:12:10.379"></status>
+</kw>
+<kw name="Then user validate the episode result" library="searchKeywords">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5 seconds</arg>
+</arguments>
+<msg timestamp="20210721 19:12:15.383" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210721 19:12:10.382" endtime="20210721 19:12:15.384"></status>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${title_player}</arg>
+<arg>Upin</arg>
+</arguments>
+<msg timestamp="20210721 19:12:15.448" level="INFO">Element 'xpath://div[@class='title-player']' contains text 'Upin'.</msg>
+<status status="PASS" starttime="20210721 19:12:15.384" endtime="20210721 19:12:15.448"></status>
+</kw>
+<status status="PASS" starttime="20210721 19:12:10.381" endtime="20210721 19:12:15.448"></status>
+</kw>
+<kw name="Close my Browser" library="Setup" type="teardown">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20210721 19:12:15.448" endtime="20210721 19:12:17.987"></status>
+</kw>
+<status status="PASS" starttime="20210721 19:12:15.448" endtime="20210721 19:12:17.988"></status>
+</kw>
+<status status="PASS" starttime="20210721 19:11:45.378" endtime="20210721 19:12:17.989" critical="yes"></status>
+</test>
+<test id="s1-t3" name="Success search Extra">
+<kw name="Chrome Mobile Go To URL" library="Setup" type="setup">
+<doc>Starts a Chrome Browser in Mobile Emulation with specified device model</doc>
+<arguments>
+<arg>${siteUrl}</arg>
+</arguments>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+</arguments>
+<assign>
+<var>${options}</var>
+</assign>
+<msg timestamp="20210721 19:12:17.993" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002643E063280&gt;</msg>
+<status status="PASS" starttime="20210721 19:12:17.993" endtime="20210721 19:12:17.993"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>deviceName=${mobile}</arg>
+</arguments>
+<assign>
+<var>&amp;{mobile_emulation}</var>
+</assign>
+<msg timestamp="20210721 19:12:17.993" level="INFO">&amp;{mobile_emulation} = { deviceName=Galaxy S5 }</msg>
+<status status="PASS" starttime="20210721 19:12:17.993" endtime="20210721 19:12:17.993"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${options}</arg>
+<arg>add_experimental_option</arg>
+<arg>mobileEmulation</arg>
+<arg>${mobile_emulation}</arg>
+</arguments>
+<status status="PASS" starttime="20210721 19:12:17.993" endtime="20210721 19:12:17.993"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>disable-gpu</arg>
+</arguments>
+<status status="PASS" starttime="20210721 19:12:17.993" endtime="20210721 19:12:17.993"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>disable-popup-blocking</arg>
+</arguments>
+<status status="PASS" starttime="20210721 19:12:17.993" endtime="20210721 19:12:17.993"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>no-sandbox</arg>
+</arguments>
+<status status="PASS" starttime="20210721 19:12:17.993" endtime="20210721 19:12:17.993"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>disable-infobars</arg>
+</arguments>
+<status status="PASS" starttime="20210721 19:12:17.993" endtime="20210721 19:12:17.993"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${options}</arg>
+<arg>to_capabilities</arg>
+</arguments>
+<assign>
+<var>${desiredcap}</var>
+</assign>
+<msg timestamp="20210721 19:12:17.993" level="INFO">${desiredcap} = {'browserName': 'chrome', 'version': '', 'platform': 'ANY', 'goog:chromeOptions': {'mobileEmulation': {'deviceName': 'Galaxy S5'}, 'extensions': [], 'args': ['disable-gpu', 'disable-popup-blocking', '...</msg>
+<status status="PASS" starttime="20210721 19:12:17.993" endtime="20210721 19:12:17.993"></status>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<arguments>
+<arg>Chrome</arg>
+<arg>chrome_options=${options}</arg>
+<arg>desired_capabilities=${desiredcap}</arg>
+</arguments>
+<msg timestamp="20210721 19:12:17.993" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20210721 19:12:17.993" endtime="20210721 19:12:19.816"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+</arguments>
+<msg timestamp="20210721 19:12:19.817" level="INFO">Opening url 'https://rc-webm.rctiplus.com'</msg>
+<status status="PASS" starttime="20210721 19:12:19.816" endtime="20210721 19:12:35.496"></status>
+</kw>
+<status status="PASS" starttime="20210721 19:12:17.993" endtime="20210721 19:12:35.496"></status>
+</kw>
+<kw name="Given user in the search page" library="searchKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${searchbar}</arg>
+<arg>20 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20210721 19:12:35.499" endtime="20210721 19:12:35.548"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${searchbar}</arg>
+</arguments>
+<msg timestamp="20210721 19:12:35.548" level="INFO">Clicking element 'xpath://div[contains(text(),'rctiplus.com')]'.</msg>
+<status status="PASS" starttime="20210721 19:12:35.548" endtime="20210721 19:12:37.270"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5 seconds</arg>
+</arguments>
+<msg timestamp="20210721 19:12:42.279" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210721 19:12:37.271" endtime="20210721 19:12:42.279"></status>
+</kw>
+<status status="PASS" starttime="20210721 19:12:35.498" endtime="20210721 19:12:42.279"></status>
+</kw>
+<kw name="When user search &quot;KDI&quot; from the extra tab" library="searchKeywords">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${inputsearch}</arg>
+<arg>KDI</arg>
+</arguments>
+<msg timestamp="20210721 19:12:42.283" level="INFO">Typing text 'KDI' into text field 'xpath://input[@placeholder='Search for a program, genre, etc.']'.</msg>
+<status status="PASS" starttime="20210721 19:12:42.282" endtime="20210721 19:12:42.481"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${firstcontent}</arg>
+<arg>20 second</arg>
+</arguments>
+<status status="PASS" starttime="20210721 19:12:42.481" endtime="20210721 19:12:45.289"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${extratab}</arg>
+</arguments>
+<msg timestamp="20210721 19:12:45.290" level="INFO">Clicking element 'xpath://a[contains(text(),'Extra')]'.</msg>
+<status status="PASS" starttime="20210721 19:12:45.290" endtime="20210721 19:12:45.741"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${firstcontent}</arg>
+<arg>20 second</arg>
+</arguments>
+<status status="PASS" starttime="20210721 19:12:45.742" endtime="20210721 19:12:45.793"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${searchresult}</arg>
+</arguments>
+<msg timestamp="20210721 19:12:45.813" level="INFO">Current page contains element 'xpath://div[@class='tab-pane active']//p[@class='title'][contains(text(),'Search Result')]'.</msg>
+<status status="PASS" starttime="20210721 19:12:45.793" endtime="20210721 19:12:45.813"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${firstcontent}</arg>
+</arguments>
+<msg timestamp="20210721 19:12:45.814" level="INFO">Clicking element 'xpath://div[@class='tab-pane active']//div[@class='content-list']//div[2]//img[1]'.</msg>
+<status status="PASS" starttime="20210721 19:12:45.813" endtime="20210721 19:12:48.575"></status>
+</kw>
+<status status="PASS" starttime="20210721 19:12:42.281" endtime="20210721 19:12:48.575"></status>
+</kw>
+<kw name="Then user validate the extra result" library="searchKeywords">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5 seconds</arg>
+</arguments>
+<msg timestamp="20210721 19:12:53.581" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210721 19:12:48.578" endtime="20210721 19:12:53.581"></status>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${title_player}</arg>
+<arg>KDI</arg>
+</arguments>
+<msg timestamp="20210721 19:12:53.636" level="INFO">Element 'xpath://div[@class='title-player']' contains text 'KDI'.</msg>
+<status status="PASS" starttime="20210721 19:12:53.581" endtime="20210721 19:12:53.636"></status>
+</kw>
+<status status="PASS" starttime="20210721 19:12:48.577" endtime="20210721 19:12:53.637"></status>
+</kw>
+<kw name="Close my Browser" library="Setup" type="teardown">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20210721 19:12:53.639" endtime="20210721 19:12:56.129"></status>
+</kw>
+<status status="PASS" starttime="20210721 19:12:53.638" endtime="20210721 19:12:56.130"></status>
+</kw>
+<status status="PASS" starttime="20210721 19:12:17.992" endtime="20210721 19:12:56.131" critical="yes"></status>
+</test>
+<test id="s1-t4" name="Success search Extra">
+<kw name="Chrome Mobile Go To URL" library="Setup" type="setup">
+<doc>Starts a Chrome Browser in Mobile Emulation with specified device model</doc>
+<arguments>
+<arg>${siteUrl}</arg>
+</arguments>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+</arguments>
+<assign>
+<var>${options}</var>
+</assign>
+<msg timestamp="20210721 19:12:56.139" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002643E073EB0&gt;</msg>
+<status status="PASS" starttime="20210721 19:12:56.139" endtime="20210721 19:12:56.140"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>deviceName=${mobile}</arg>
+</arguments>
+<assign>
+<var>&amp;{mobile_emulation}</var>
+</assign>
+<msg timestamp="20210721 19:12:56.140" level="INFO">&amp;{mobile_emulation} = { deviceName=Galaxy S5 }</msg>
+<status status="PASS" starttime="20210721 19:12:56.140" endtime="20210721 19:12:56.140"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${options}</arg>
+<arg>add_experimental_option</arg>
+<arg>mobileEmulation</arg>
+<arg>${mobile_emulation}</arg>
+</arguments>
+<status status="PASS" starttime="20210721 19:12:56.141" endtime="20210721 19:12:56.141"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>disable-gpu</arg>
+</arguments>
+<status status="PASS" starttime="20210721 19:12:56.141" endtime="20210721 19:12:56.142"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>disable-popup-blocking</arg>
+</arguments>
+<status status="PASS" starttime="20210721 19:12:56.142" endtime="20210721 19:12:56.142"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>no-sandbox</arg>
+</arguments>
+<status status="PASS" starttime="20210721 19:12:56.142" endtime="20210721 19:12:56.142"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>disable-infobars</arg>
+</arguments>
+<status status="PASS" starttime="20210721 19:12:56.142" endtime="20210721 19:12:56.142"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${options}</arg>
+<arg>to_capabilities</arg>
+</arguments>
+<assign>
+<var>${desiredcap}</var>
+</assign>
+<msg timestamp="20210721 19:12:56.142" level="INFO">${desiredcap} = {'browserName': 'chrome', 'version': '', 'platform': 'ANY', 'goog:chromeOptions': {'mobileEmulation': {'deviceName': 'Galaxy S5'}, 'extensions': [], 'args': ['disable-gpu', 'disable-popup-blocking', '...</msg>
+<status status="PASS" starttime="20210721 19:12:56.142" endtime="20210721 19:12:56.142"></status>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<arguments>
+<arg>Chrome</arg>
+<arg>chrome_options=${options}</arg>
+<arg>desired_capabilities=${desiredcap}</arg>
+</arguments>
+<msg timestamp="20210721 19:12:56.142" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20210721 19:12:56.142" endtime="20210721 19:12:57.877"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+</arguments>
+<msg timestamp="20210721 19:12:57.878" level="INFO">Opening url 'https://rc-webm.rctiplus.com'</msg>
+<status status="PASS" starttime="20210721 19:12:57.877" endtime="20210721 19:13:08.085"></status>
+</kw>
+<status status="PASS" starttime="20210721 19:12:56.137" endtime="20210721 19:13:08.086"></status>
+</kw>
+<kw name="Given user in the search page" library="searchKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${searchbar}</arg>
+<arg>20 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20210721 19:13:08.088" endtime="20210721 19:13:08.136"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${searchbar}</arg>
+</arguments>
+<msg timestamp="20210721 19:13:08.136" level="INFO">Clicking element 'xpath://div[contains(text(),'rctiplus.com')]'.</msg>
+<status status="PASS" starttime="20210721 19:13:08.136" endtime="20210721 19:13:10.197"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5 seconds</arg>
+</arguments>
+<msg timestamp="20210721 19:13:15.201" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210721 19:13:10.198" endtime="20210721 19:13:15.201"></status>
+</kw>
+<status status="PASS" starttime="20210721 19:13:08.087" endtime="20210721 19:13:15.202"></status>
+</kw>
+<kw name="When user search &quot;KDI&quot; from the clip tab" library="searchKeywords">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${inputsearch}</arg>
+<arg>KDI</arg>
+</arguments>
+<msg timestamp="20210721 19:13:15.206" level="INFO">Typing text 'KDI' into text field 'xpath://input[@placeholder='Search for a program, genre, etc.']'.</msg>
+<status status="PASS" starttime="20210721 19:13:15.206" endtime="20210721 19:13:15.418"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${firstcontent}</arg>
+<arg>20 second</arg>
+</arguments>
+<status status="PASS" starttime="20210721 19:13:15.418" endtime="20210721 19:13:17.882"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${cliptab}</arg>
+</arguments>
+<msg timestamp="20210721 19:13:17.883" level="INFO">Clicking element 'xpath://a[contains(text(),'Clip')]'.</msg>
+<status status="PASS" starttime="20210721 19:13:17.883" endtime="20210721 19:13:18.076"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${firstcontent}</arg>
+<arg>20 second</arg>
+</arguments>
+<status status="PASS" starttime="20210721 19:13:18.076" endtime="20210721 19:13:18.131"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${searchresult}</arg>
+</arguments>
+<msg timestamp="20210721 19:13:18.150" level="INFO">Current page contains element 'xpath://div[@class='tab-pane active']//p[@class='title'][contains(text(),'Search Result')]'.</msg>
+<status status="PASS" starttime="20210721 19:13:18.132" endtime="20210721 19:13:18.151"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${firstcontent}</arg>
+</arguments>
+<msg timestamp="20210721 19:13:18.151" level="INFO">Clicking element 'xpath://div[@class='tab-pane active']//div[@class='content-list']//div[2]//img[1]'.</msg>
+<status status="PASS" starttime="20210721 19:13:18.151" endtime="20210721 19:13:21.950"></status>
+</kw>
+<status status="PASS" starttime="20210721 19:13:15.205" endtime="20210721 19:13:21.951"></status>
+</kw>
+<kw name="Then user validate the clip result" library="searchKeywords">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5 seconds</arg>
+</arguments>
+<msg timestamp="20210721 19:13:26.964" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210721 19:13:21.953" endtime="20210721 19:13:26.966"></status>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${title_player}</arg>
+<arg>KDI</arg>
+</arguments>
+<msg timestamp="20210721 19:13:27.032" level="INFO">Element 'xpath://div[@class='title-player']' contains text 'KDI'.</msg>
+<status status="PASS" starttime="20210721 19:13:26.967" endtime="20210721 19:13:27.032"></status>
+</kw>
+<status status="PASS" starttime="20210721 19:13:21.952" endtime="20210721 19:13:27.033"></status>
+</kw>
+<kw name="Close my Browser" library="Setup" type="teardown">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20210721 19:13:27.035" endtime="20210721 19:13:30.577"></status>
+</kw>
+<status status="PASS" starttime="20210721 19:13:27.034" endtime="20210721 19:13:30.577"></status>
+</kw>
+<status status="PASS" starttime="20210721 19:12:56.135" endtime="20210721 19:13:30.580" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20210721 19:11:02.951" endtime="20210721 19:13:30.585"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0">Critical Tests</stat>
+<stat pass="4" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="0" id="s1" name="searchTest">searchTest</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20210721 19:12:56.134" level="WARN">Multiple test cases with name 'Success search Extra' executed in test suite 'searchTest'.</msg>
+</errors>
+</robot>
