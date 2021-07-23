@@ -26,21 +26,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b133550-c664-463d-b9ad-ae3763f96f05" name="Default Changelist" comment="first commit">
-      <change afterPath="$PROJECT_DIR$/parallel_execution.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/pabot_results/0/output.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/pabot_results/0/robot_stderr.out" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/pabot_results/0/robot_stdout.out" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/pabot_results/1/output.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/pabot_results/1/robot_stderr.out" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/pabot_results/1/robot_stdout.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/search/searchKeywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/features/search/searchKeywords.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/search/searchTest.robot" beforeDir="false" afterPath="$PROJECT_DIR$/features/search/searchTest.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/results/log.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/results/output.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/results/report.html" afterDir="false" />
-    </list>
+    <list default="true" id="0b133550-c664-463d-b9ad-ae3763f96f05" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
