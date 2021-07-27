@@ -29,11 +29,18 @@
     <list default="true" id="0b133550-c664-463d-b9ad-ae3763f96f05" name="Default Changelist" comment="first commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Regression.bat" beforeDir="false" afterPath="$PROJECT_DIR$/Regression.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/catch_up/catch_upKeywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/features/catch_up/catch_upKeywords.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/search/searchTest.robot" beforeDir="false" afterPath="$PROJECT_DIR$/features/search/searchTest.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parallel_execution.bat" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/Setup.robot" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Setup.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/results/log.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/results/output.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/results/report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-results/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-results/log.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-results/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-results/output.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-results/pabot_results/0/output.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-results/pabot_results/0/robot_stderr.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-results/pabot_results/0/robot_stdout.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-results/pabot_results/1/output.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-results/pabot_results/1/robot_stderr.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-results/pabot_results/1/robot_stdout.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-results/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-results/report.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +58,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="d9887dc8-bf1d-4b65-bc03-b01c5da490a2" />
+        <option name="url" value="https://github.com/ahmadachmed/robot_webm.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="ProjectId" id="1t9VUJbzTfPc5XtU3bgCluQawLd" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -62,6 +77,9 @@
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.startup.tasks" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -79,18 +97,21 @@
       <option name="PARAMETERS" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="parallel_execution" type="BatchConfigurationType" factoryName="Batch">
+    <configuration name="TP Runner" type="BatchConfigurationType" factoryName="Batch">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="TP_DEV_TOKEN" value="aJVYH9bOKGzTuxCQhB2wpKq1OMCxxnpTrTIB-hisErE1" />
+      </envs>
       <module name="" />
-      <option name="SCRIPT_NAME" value="parallel_execution.bat" />
+      <option name="SCRIPT_NAME" value="tp_runner.bat" />
       <option name="PARAMETERS" value="" />
       <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Batch.Regression" />
-      <item itemvalue="Batch.parallel_execution" />
+      <item itemvalue="Batch.TP Runner" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -130,8 +151,53 @@
       <option name="project" value="LOCAL" />
       <updated>1626432309782</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="first commit">
+      <created>1626693053438</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1626693053438</updated>
+    </task>
+    <task id="LOCAL-00006" summary="first commit">
+      <created>1626703136844</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1626703136844</updated>
+    </task>
+    <task id="LOCAL-00007" summary="first commit">
+      <created>1626844127408</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1626844127408</updated>
+    </task>
+    <task id="LOCAL-00008" summary="first commit">
+      <created>1626844319844</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1626844319844</updated>
+    </task>
+    <task id="LOCAL-00009" summary="first commit">
+      <created>1627018240526</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1627018240526</updated>
+    </task>
+    <task id="LOCAL-00010" summary="first commit">
+      <created>1627018297914</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1627018297914</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.bat" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -160,47 +226,5 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
     <option name="LAST_COMMIT_MESSAGE" value="first commit" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1626439523509">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1626439523509" />
-    <state x="100" y="100" width="1720" height="840" key="DiffContextDialog" timestamp="1626087975544">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="100" y="100" width="1720" height="840" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1626087975544" />
-    <state x="740" y="262" key="FileChooserDialogImpl" timestamp="1623145217942">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="740" y="262" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1623145217942" />
-    <state width="1896" height="280" key="GridCell.Tab.0.bottom" timestamp="1626444784604">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1896" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1626444784604" />
-    <state width="1896" height="280" key="GridCell.Tab.0.center" timestamp="1626444784604">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1896" height="280" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1626444784604" />
-    <state width="1896" height="280" key="GridCell.Tab.0.left" timestamp="1626444784604">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1896" height="280" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1626444784604" />
-    <state width="1896" height="280" key="GridCell.Tab.0.right" timestamp="1626444784604">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1896" height="280" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1626444784604" />
-    <state x="807" y="222" key="RollbackChangesDialog" timestamp="1626432475066">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="807" y="222" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1626432475066" />
-    <state x="552" y="240" key="Vcs.Push.Dialog.v2" timestamp="1626432330397">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="552" y="240" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1626432330397" />
-    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1626087662230">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1626087662230" />
   </component>
 </project>

@@ -10,6 +10,7 @@ ${title}       xpath://h1[@class='content-title']
 ${title_player}    xpath://div[@class='title-player']
 ${episodetab}   xpath://a[contains(text(),'Episode')]
 ${extratab}     xpath://a[contains(text(),'Extra')]
+${cliptab}     xpath://a[contains(text(),'Clip')]
 
 *** Keywords ***
 user in the search page
@@ -48,5 +49,17 @@ user search "KDI" from the extra tab
     click element   ${firstcontent}
 
 user validate the extra result
+    sleep   5 seconds
+    element should contain     ${title_player}      KDI
+
+user search "KDI" from the clip tab
+    input text  ${inputsearch}      KDI
+    wait until element is visible   ${firstcontent}     20 second
+    click element   ${cliptab}
+    wait until element is visible   ${firstcontent}     20 second
+    page should contain element     ${searchresult}
+    click element   ${firstcontent}
+
+user validate the clip result
     sleep   5 seconds
     element should contain     ${title_player}      KDI
