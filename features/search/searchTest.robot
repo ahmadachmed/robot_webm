@@ -25,7 +25,7 @@ Success search Extra
     When user search "KDI" from the extra tab
     Then user validate the extra result
 
-Success search Extra
+Success search Clip
     Given user in the search page
     When user search "KDI" from the clip tab
     Then user validate the clip result
