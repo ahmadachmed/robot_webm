@@ -7,11 +7,9 @@ ${mnctvchannel}  xpath://h1[contains(text(),'MNCTV')]
 ${gtvchannel}  xpath://h1[contains(text(),'GTV')]
 ${iNewschannel}  xpath://h1[contains(text(),'INEWS')]
 ${catchuptv}  xpath://h2[contains(text(),'Catch Up TV')]
-${catchupfirst}  xpath://body/div[@id='__next']/div[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[2]
-${adsplay}      xpath://body/div[@id='__next']/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[11]/div[3]/div[2]/div[1]
+${catchupfirst}  xpath://div[@class='tab-pane active']//div[@class='program-item row']//div[1]
 ${playpause}    xpath://body/div[@id='__next']/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[11]/div[1]/div[1]/div[1]/div[2]/div[1]
 ${player}   xpath://body/div[@id='__next']/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[4]/video[1]
-${skipads}  xpath://body/div[@id='__next']/div[1]/div[2]/div[1]/div[1]/div[1]
 
 *** Keywords ***
 user in catch up "RCTI" Channel
