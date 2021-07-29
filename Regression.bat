@@ -1,1 +1,1 @@
-robot -d test-results features/.
+robot -d test-results --skiponfailure skipped features/.

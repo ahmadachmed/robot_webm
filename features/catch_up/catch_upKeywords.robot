@@ -14,7 +14,7 @@ ${player}   xpath://body/div[@id='__next']/div[1]/div[2]/div[1]/div[1]/div[1]/di
 *** Keywords ***
 user in catch up "RCTI" Channel
     click element   ${livetvbtn}
-    sleep   5 seconds
+    sleep   8 seconds
     wait until element is visible  ${catchuptv}    20 seconds
     click element   ${catchuptv}
 
@@ -23,7 +23,7 @@ user in catch up "MNCTV" Channel
     click element   ${livetvbtn}
 #   sleep   5 seconds
     click element   ${mnctvchannel}
-#   sleep   5 seconds
+    sleep   8 seconds
     wait until element is visible   ${catchuptv}    20 seconds
     click element   ${catchuptv}
 
@@ -32,7 +32,7 @@ user in catch up "GTV" Channel
     click element   ${livetvbtn}
 #    sleep   5 seconds
     click element   ${gtvchannel}
-#    sleep   5 seconds
+    sleep   8 seconds
     wait until element is visible   ${catchuptv}    20 seconds
     click element   ${catchuptv}
 
@@ -41,7 +41,7 @@ user in catch up "iNews" Channel
     click element   ${livetvbtn}
 #    sleep   5 seconds
     click element   ${iNewschannel}
-#    sleep   5 seconds
+    sleep   8 seconds
     wait until element is visible   ${catchuptv}    20 seconds
     click element   ${catchuptv}
 
